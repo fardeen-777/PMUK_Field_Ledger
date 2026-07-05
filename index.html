@@ -780,7 +780,7 @@ function employeeCard(emp){
 function locInfoText(locName){
   const info = DATA.location_info ? DATA.location_info[locName] : null;
   if(!info) return '';
-  if(info.type === 'branch') return `${info.area} · ${info.region}`;
+  if(info.type === 'branch') return info.area;
   if(info.type === 'area') return info.region;
   return '';
 }
